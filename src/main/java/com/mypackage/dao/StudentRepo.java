@@ -14,6 +14,6 @@ public interface StudentRepo extends CrudRepository<Student, Integer> {
     @Query(value = "select * from student where id = ?1", nativeQuery = true)
     public Student getStudentById(int id);
 
-    @Query(value = "select * from student where name = :name")
-    public List<Student> getStudentByName(@Param(value = "name") String name, Sort sort);
+    @Query(value = "select * from student where name = ?1", nativeQuery = true)
+    public List<Student> getStudentByName(String name);
 }

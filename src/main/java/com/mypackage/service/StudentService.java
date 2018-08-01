@@ -39,6 +39,6 @@ public class StudentService {
     }
 
     public List<Student> getStudentByName(String name) {
-        return studentRepo.getStudentByName(name, new Sort("id"));
+        return studentRepo.getStudentByName(name);
     }
 }
