@@ -16,6 +16,7 @@ public class StudentController {
     @Autowired
     StudentService studentService;
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @RequestMapping(value="/name/{name}", method = RequestMethod.GET)
     public List<Student> getStudentByName(@PathVariable(value = "name", required = true) String name){
         return studentService.getStudentByName(name);
